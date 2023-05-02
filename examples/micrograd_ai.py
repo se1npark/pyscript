@@ -76,7 +76,7 @@ def micrograd_demo(*args, **kwargs):
     # visualize in 2D
     plt.figure(figsize=(5, 5))
     plt.scatter(X[:, 0], X[:, 1], c=y, s=20, cmap="jet")
-    plt
+    plt  # noqa: B018
     pyscript.write("micrograd-run-all-fig1-div", plt)
 
     # cell
@@ -157,5 +157,5 @@ def micrograd_demo(*args, **kwargs):
     finish = datetime.datetime.now()
     print_div(f"It took {(finish-start).seconds} seconds to run this code.")
 
-    plt
+    plt  # noqa: B018
     return plt
